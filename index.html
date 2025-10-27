@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mayara Sena | Portifólio</title>
+  <!-- Link para o CSS externo -->
+  <link rel="stylesheet" href="../meuportifolio/index.css">
+</head>
+<body>
+
+  <header>
+    <h1>PORTIFÓLIO DE FOTOS</h1>
+  </header>
+
+  <nav>
+    <a href="#galeria">Galeria |</a>
+    <a href="#sobre">Sobre | </a>
+    <a href="#contato">Contato | </a>
+    <a href="#Sociais">Redes Sociais</a>
+  </nav>
+
+  <section id="galeria">
+    <div class="filter-buttons">
+      <button data-filter="all">Todas</button>
+      <button data-filter="natureza">Natureza</button>
+      <button data-filter="retratos">Retratos</button>
+      <button data-filter="eventos">Eventos</button>
+    </div>
+
+    <div class="gallery">
+     <div class="photo"><img src="images/18_05(WEBP)_0.webp" alt="Foto 1" data-category="natureza"></div>
+     <div class="photo"><img src="images/20230427_173739.jpg" alt="Foto 2" data-category="natureza"></div>
+     <div class="photo"><img src="images/53389448977_30be4ea9a3_o.jpg" alt="Foto 3" data-category="eventos"></div>
+     <div class="photo"><img src="images/20230418170522_IMG_5584.jpg" alt="Foto 4" data-category="eventos"></div>
+     <div class="photo"><img src="images/a reação_ 😧(WEBP).webp" alt="Foto 5" data-category="natureza"></div>
+     <div class="photo"><img src="images/CyjvqIPrvH7(WEBP).webp" alt="Foto 6" data-category="natureza"></div>
+     <div class="photo"><img src="images/20230722_055415.jpg" alt="Foto 7" data-category="natureza"></div>
+     <div class="photo"><img src="images/20250831_172133.jpg" alt="Foto 8" data-category="natureza"></div>
+     <div class="photo"><img src="images/20240129_142825.jpg" alt="Foto 9" data-category="natureza"></div>
+     <div class="photo"><img src="images/🙃(WEBP)_0.webp" alt="Foto 10" data-category="natureza"></div>
+     <div class="photo"><img src="images/Captando a alma das plantas(WEBP)_0.webp" alt="Foto 11" data-category="natureza"></div>
+     <div class="photo"><img src="images/Captando a alma das plantas(WEBP)_1.webp" alt="Foto 12" data-category="natureza"></div>
+     <div class="photo"><img src="images/IMG_20220421_105245.jpg" alt="Foto 13" data-category="retratos"></div>
+     <div class="photo"><img src="images/20240320_105043.jpg" alt="Foto 14" data-category="eventos"></div>
+    </div>
+  </section>
+
+  <section id="sobre" class="about">
+    <h2>Sobre Mim</h2>
+    <p>Me chamo Mayara, tenho 23 anos e esse site foi criado por mim na intenção de lhes apresentar
+    um pouco do meu trabalho. A minha história com a fotografia começou em 2022, onde registrava 
+    de tudo um pouco, desde pássaros, até a lua e tudo isso com um celular. Anos depois ganhei uma
+    câmera fotográfica (Nikon), foi onde me apaixonei ainda mais por fotografar e me dediquei a esse trabalho.
+    O meu foco sempre foi nas pequenas coisas, em detalhes que estavam sempre presentes no meu dia a dia e que 
+    não poderiam mais passar despercebidos.</p>
+  </section>
+
+  <section id="contato" class="contact">
+    <h2>Contato</h2>
+    <p>Quer trocar uma ideia ou sugerir um ensaio? Manda um e-mail para: <strong>mayarasenads@gmail.com</strong> ou entre
+        em contato através das redes sociais abaixo.</p>
+  </section>
+
+   <section id="Sociais" class="social">
+       <h2>Redes Sociais</h2>
+       <div class="icons">
+        <a>
+        <a href="https://www.instagram.com/studeolens"
+          target="_blank" rel="noopener noreferrer">
+          <img src="./images/instagram-logo-free-png.webp"></img>
+          <span>@studeolens </span>
+        </a>
+        <a href="https://www.instagram.com/amayarasn"
+          target="_blank" rel="noopener noreferrer">
+          <img src="./images/instagram-logo-free-png.webp"></img>
+          <span>@amayarasn</span>
+        </a>
+        </div>
+    </section>
+
+  <footer>
+    <p>© 2025 Meu Portfólio de Fotos</p>
+  </footer>
+
+  <script>
+     const buttons = 
+    document.querySelectorAll('.filter-buttons button');
+     const images = document.querySelectorAll('.gallery img');
+    buttons.forEach(button => {
+     button.addEventListener('click', () => {
+    const filter = button.getAttribute('data-filter');
+
+         images.forEach(img => {
+             const category =
+    img.getAttribute('data-category');
+            if (filter === 'all' || filter === category) {
+                img.style.display = 'block';
+            } else {
+             img.style.display = 'none';
+            }
+         })
+    });
+})
+  </script>
+</body>
+</html>
