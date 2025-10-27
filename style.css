@@ -148,13 +148,15 @@ footer img {
 
 .social .icons{
   display: flex;
-  gap: 40px;
+  gap: 30px;
 }
 
 .social .icons a {
   display: flex;
-  align-items: center;
+  align-items:center;
   gap: 8px;
+  margin-left: 0px;
+  text-align: left;
   text-decoration: none;
   color: #111;
   font-weight: 500;
